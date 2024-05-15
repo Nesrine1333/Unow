@@ -15,22 +15,30 @@ export const Carousel = ({ data }) => {
   };
 
   return (
+    <div>
     <div className="carousel">
       <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
       {data.map((item, idx) => {
         return (
-          <img
+          
+  <img
             src={item.src}
             alt={item.alt}
             key={idx}
             className={slide === idx ? "slide" : "slide slide-hidden"}
           />
+
+
+
+          
+        
         );
       })}
       <BsArrowRightCircleFill
         onClick={nextSlide}
         className="arrow arrow-right"
       />
+   
       <span className="indicators">
         {data.map((_, idx) => {
           return (
@@ -44,6 +52,8 @@ export const Carousel = ({ data }) => {
           );
         })}
       </span>
+      
+    </div>
     </div>
   );
 };
