@@ -15,7 +15,7 @@ export const Carousel = ({ data }) => {
   };
 
   return (
-    <div>
+    <div  className="container">
     <div className="carousel">
       <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
       {data.map((item, idx) => {
